@@ -10,8 +10,12 @@ RUN nrm use taobao
 RUN \
     npm install -g bower
 RUN \
-    bower i --allow-root && \
-    npm i && \
+    bower i --allow-root
+
+RUN \
+    npm i
+
+RUN \
     npm start > /dev/null
 
 RUN \
