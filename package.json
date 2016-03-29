@@ -20,6 +20,6 @@
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-test/protractor.conf.js --browser=firefox"
+    "protractor": "protractor e2e-test/protractor.conf.js --browsers=Chrome"
   }
 }
