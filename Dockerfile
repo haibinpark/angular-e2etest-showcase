@@ -15,21 +15,19 @@ RUN \
 RUN \
     npm i
 
-RUN \
-    npm start > /dev/null
-
 ENV DISPLAY :99.0
 
-RUN \
- /etc/init.d/xvfb start > /dev/null
+# Install Xvfb init script
+ADD ./build/xvfb_init.sh /etc/init.d/xvfb
+RUN chmod a+x /etc/init.d/xvfb
+ADD ./build/xvfb-daemon-run.sh /usr/bin/xvfb-daemon-run
+RUN chmod a+x /usr/bin/xvfb-daemon-run
 
-RUN \
- sleep 1
+# Install startup script
+ADD ./build/wrapper_startup.sh /opt/wrapper_startup.sh
+RUN chmod a+x /opt/wrapper_startup.sh
 
-RUN \
-    npm run test-single-run && \
-    npm run protractor
-
+CMD ["/opt/wrapper_startup.sh"]
 
 
 
