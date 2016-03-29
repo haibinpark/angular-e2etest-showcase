@@ -4,5 +4,6 @@ export DISPLAY=:99
 sleep 1
 $@
 exit_value=$?
-/etc/init.d/xvfb stop
+echo exit_value
+#/etc/init.d/xvfb stop
 exit $exit_value
