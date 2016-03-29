@@ -18,10 +18,13 @@ RUN \
 RUN \
     npm start > /dev/null
 
+ENV DISPLAY :99.0
+
 RUN \
- export DISPLAY=:99.0 && \
- /etc/init.d/xvfb start &&
- sleep 1 \
+ /etc/init.d/xvfb start > /dev/null
+
+RUN \
+ sleep 1
 
 RUN \
     npm run test-single-run && \
