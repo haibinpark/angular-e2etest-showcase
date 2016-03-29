@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-/usr/bin/xvfb-daemon-run > /dev/null
-npm start > /dev/null
-npm run test-single-run > /dev/null
-npm run protractor > /dev/null
+/usr/bin/xvfb-daemon-run
+npm start
+npm run test-single-run
+npm run protractor
