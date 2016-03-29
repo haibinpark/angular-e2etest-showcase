@@ -5,7 +5,7 @@ ADD . /usr/nodeapp
 
 WORKDIR /usr/nodeapp
 
-RUN nrm use taobao
+RUN nrm use cnpm
 
 RUN \
     npm install -g bower
