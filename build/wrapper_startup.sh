@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 /usr/bin/xvfb-daemon-run
-npm start
+npm start > /dev/null &
 sleep 1
 ps aux | grep "xvfb"
 echo "run test single run"
