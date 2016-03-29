@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /usr/bin/xvfb-daemon-run
+/usr/bin/xvfb-daemon-run
 npm start
 sleep 1
 ps aux | grep "xvfb"

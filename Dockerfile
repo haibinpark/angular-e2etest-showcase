@@ -27,7 +27,7 @@ RUN chmod a+x /usr/bin/xvfb-daemon-run
 ADD ./build/wrapper_startup.sh /opt/wrapper_startup.sh
 RUN chmod a+x /opt/wrapper_startup.sh
 
-CMD ["/opt/wrapper_startup.sh"]
+ENTRYPOINT ["sh", "/opt/wrapper_startup.sh"]
 
 
 
