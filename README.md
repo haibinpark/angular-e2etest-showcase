@@ -19,38 +19,29 @@
 #### 1) 安装bower包管理器
 在webstorm的terminal中执行脚本
 ```
-npm install bower -save
+npm install bower -g
 ```
-##### 2) 初始化bower.json文件
-执行脚本生成bower.json文件，用于管理bower的依赖和配置。
-```
-bower init
-```
-#### 3) 安装angular等框架
+
+#### 2) 安装angular等框架
 angular、angular-mocks框架
 
 ```
-bower install angular -save
+bower i
 ```
 
-```
-bower install angular-mocks -save
-```
-
-### 2、安装服务器端框架
+### 2、安装服务器端框架及依赖模块
 服务器依赖于nodejs，需要安装nodejs的包，首先在根目录下创建package.json文件。
-#### 1)安装http-server模块
-```
-npm install http-server -save
-```
-#### 2)安装其他模块
+* **http-server** 模块
 * **jasmine-core**:javascript单元测试框架；
 * **karma**:模拟javascript脚本在各种浏览器执行的工具；
 * **karma-chrome-launcher**: 在chrome浏览器执行的工具；
 * **karma-jasmine**: jasmine-core在karma中的适配器；
 * **karma-junit-reporter**: 生成junit报告；
 * **protractor**:E2E测试框架
-
+安装模块
+```
+npm i
+```
 ### 3、启动服务器
 要启动node服务器需要在package.json中配置script节点,dependencies中定义依赖包，在script配置start节点用于启动服务器，test节点的内容会在后面讲解。
 ```json
@@ -233,6 +224,38 @@ npm test
 ![debug点击](http://7xlh63.com1.z0.glb.clouddn.com/4c90f7283a25b91e4ec76835d8698127.png)
 
 ![debug code](http://7xlh63.com1.z0.glb.clouddn.com/aa81509c780345df954477bc2fbf6d88.png)
+
+### 单元测试覆盖率
+如果需要对单元测试覆盖率进行统计，可以安装karma-coverage并配置karma文件。这样在单元测试完成后，会生成测试覆盖率报告文档。
+```
+npm install karma-coverage -save
+```
+在karma.conf.js文件中加入节点
+``` javascript
+
+// 新增节点用于配置输出文件夹
+coverageReporter: {
+           type: 'html',
+           dir: 'coverage'
+       },
+// 新增节点用于配置需要测试的文件地址（这里是controller地址）
+preprocessors: {'js/*.js': ['coverage']}
+
+// 新增元素'karma-coverage'
+plugins: [
+          'karma-chrome-launcher',
+          'karma-jasmine',
+          'karma-junit-reporter',
+          'karma-coverage',
+      ],
+// 新增元素 coverage
+reporters: ['progress', 'coverage'],
+```
+运行单元测试后在目录中生成coverage文件夹，点击index.html可以查看测试覆盖率。
+
+![测试覆盖率](http://qiniu.xdpie.com/fb0ce841d8781d287d5bc74b49a09091.png?imageView2/2/w/700)
+
+
 ## 五、E2E测试
 e2e或者端到端（end-to-end）或者UI测试是一种测试方法，它用来测试一个应用从头到尾的流程是否和设计时候所想的一样。简而言之，它从一个用户的角度出发，认为整个系统都是一个黑箱，只有UI会暴露给用户。
 ### 1、配置E2E测试
@@ -313,6 +336,16 @@ npm run update-webdriver
 npm run protractor
 ```
 ![自动化ui测试结果](http://7xlh63.com1.z0.glb.clouddn.com/84b941fef69af1c6767156b68f069732.png)
+
+## 执行构建  
+### 构建docker镜像  
+```
+docker build --no-cache=true --rm=true -t angular-e2etest-showcase . 
+```
+### 运行docker镜像  
+```
+sh wrapper_docker.sh_
+```
 
 ---
 ## 参考资料
