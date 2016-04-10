@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- build:css /css/showcase.css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/angular/angular-csp.css">
+    <link rel="stylesheet" href="/bower_components/color-picker/dist/color-picker.css">
+    <link rel="stylesheet" href="/bower_components/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/bower_components/hotbox/hotbox.css">
+    <link rel="stylesheet" href="/content/stylesheet/css/config.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="app" ng-controller="KityMinderMainController" >
+
+<div kityminder-editor on-init="initEditor(editor,minder)"></div>
+
+<!-- build:js /js/showcase.js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/bower_components/seajs/dist/sea-debug.js"></script>
+<script src="/bower_components/color-picker/src/color-picker.js"></script>
+<script src="/bower_components/codemirror/lib/codemirror.js"></script>
+<script src="/bower_components/codemirror/mode/xml/xml.js"></script>
+<script src="/bower_components/codemirror/mode/javascript/javascript.js"></script>
+<script src="/bower_components/codemirror/mode/css/css.js"></script>
+<script src="/bower_components/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/bower_components/codemirror/mode/markdown/markdown.js"></script>
+<script src="/bower_components/codemirror/addon/mode/overlay.js"></script>
+<script src="/bower_components/codemirror/mode/gfm/gfm.js"></script>
+<script src="/bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+<script src="/bower_components/kity/dist/kity.js"></script>
+<script src="/bower_components/hotbox/hotbox.js"></script>
+<script src="/lib/kityminder/src/kityminder.js"></script>
+<script src="/bower_components/marked/lib/marked.js"></script>
+<script src="/app/kityminder/kityminder.app.js"></script>
+<script src="/app/kityminder/templates.js"></script>
+<script src="/app/kityminder/service/commandBinder.service.js"></script>
+<script src="/app/kityminder/service/config.service.js"></script>
+<script src="/app/kityminder/service/memory.service.js"></script>
+<script src="/app/kityminder/service/lang.zh-cn.service.js"></script>
+<script src="/app/kityminder/service/valueTransfer.service.js"></script>
+<script src="/app/kityminder/service/minder.service.js"></script>
+<script src="/app/kityminder/service/resource.service.js"></script>
+<script src="/app/kityminder/service/revokeDialog.service.js"></script>
+<script src="/app/_filter/lang.filter.js"></script>
+<script src="/app/_directive/kityminder/topTab/topTab.directive.js"></script>
+<script src="/app/_directive/kityminder/undoRedo/undoRedo.directive.js"></script>
+<script src="/app/_directive/kityminder/appendNode/appendNode.directive.js"></script>
+<script src="/app/_directive/kityminder/arrange/arrange.directive.js"></script>
+<script src="/app/_directive/kityminder/operation/operation.directive.js"></script>
+<script src="/app/_directive/kityminder/hyperLink/hyperLink.directive.js"></script>
+<script src="/app/_directive/kityminder/imageBtn/imageBtn.directive.js"></script>
+<script src="/app/_directive/kityminder/noteBtn/noteBtn.directive.js"></script>
+<script src="/app/_directive/kityminder/resourceEditor/resourceEditor.directive.js"></script>
+<script src="/app/_directive/kityminder/priorityEditor/priorityEditor.directive.js"></script>
+<script src="/app/_directive/kityminder/progressEditor/progressEditor.directive.js"></script>
+<script src="/app/_directive/kityminder/noteEditor/noteEditor.directive.js"></script>
+<script src="/app/_directive/kityminder/notePreviewer/notePreviewer.directive.js"></script>
+<script src="/app/_directive/kityminder/templateList/templateList.directive.js"></script>
+<script src="/app/_directive/kityminder/themeList/themeList.directive.js"></script>
+<script src="/app/_directive/kityminder/layout/layout.directive.js"></script>
+<script src="/app/_directive/kityminder/styleOperator/styleOperator.directive.js"></script>
+<script src="/app/_directive/kityminder/fontOperator/fontOperator.directive.js"></script>
+<script src="/app/_directive/kityminder/expandLevel/expandLevel.directive.js"></script>
+<script src="/app/_directive/kityminder/selectAll/selectAll.directive.js"></script>
+<script src="/app/_directive/kityminder/colorPanel/colorPanel.directive.js"></script>
+<script src="/app/_directive/kityminder/navigator/navigator.directive.js"></script>
+<script src="/app/_directive/kityminder/searchBox/searchBox.directive.js"></script>
+<script src="/app/_directive/kityminder/searchBtn/searchBtn.directive.js"></script>
+<script src="/app/kityminder/dialog/hyperlink/hyperlink.ctrl.js"></script>
+<script src="/app/kityminder/dialog/image/image.ctrl.js"></script>
+<script src="/app/kityminder/dialog/im-export-node/imExportNode.ctrl.js"></script>
+<script src="/app/_directive/kityminder/kityminderEditor/kityminderEditor.directive.js"></script>
+<script src="/lib/kityminder/src/expose-kityminder.js"></script>
+<script src="/app/app.module.js"></script>
+<script src="/app/kityminder/kityminder-main-controller.js"></script>
+<!-- endbuild -->
+</body>
+</html>

@@ -1,16 +1,16 @@
 {
-  "name": "angularjs-test",
+  "name": "angularjs-e2etest-showcase",
   "description": "angularjs-test",
   "main": "",
   "authors": [
-    "wangsiyu <wangsiyu@6starhome.com>"
+    "haibin <zhaohaibin@outlook.com>"
   ],
   "license": "MIT",
   "keywords": [
     "angularjs-test"
   ],
   "moduleType": [],
-  "homepage": "http://www.stephen.com",
+  "homepage": "http://www.haibin.me",
   "private": true,
   "ignore": [
     "**/.*",
@@ -21,6 +21,19 @@
   ],
   "dependencies": {
     "angular": "^1.5.2",
-    "angular-mocks": "^1.5.2"
+    "angular-mocks": "^1.5.2",
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-sanitize": "^1.5.3",
+    "kity": "~2.0.0",
+    "json-diff": "*",
+    "angular-ui-codemirror": "~0.2.3",
+    "codemirror": "~4.8.0",
+    "marked": "~0.3.3",
+    "hotbox": "~1.0.2",
+    "color-picker": "~1.0.2",
+    "seajs": "~2.3.0"
   }
 }

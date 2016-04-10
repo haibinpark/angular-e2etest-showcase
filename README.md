@@ -328,19 +328,38 @@ set HTTPS_PROXY=%PROXY%
 ```  
 代理设置成功后，运行以下命令
 
+
 ```
 npm run update-webdriver
 ```
+手动安装webdriver  
+
+1. 下载protractor  
+下载的网盘地址:  
+`http://pan.baidu.com/s/1hr7oYva`
+
+2. 将下载的protractor拷贝到用户的目录下  
+`C:\Users\laura\AppData\Roaming\npm\node_modules` 文件目录中
+第二步：将webstorm原来项目中node文件删除，
+第三步：在terminal中输入 nrm ls 显示不报错时执行npm i 命令，报错时执行npm i nrm –g命令，后执行nrm use taobao命令
+第四步：执行npm i命令，
+第五步：执行bower i命令如果报错，看项目有没有bower文件，没有的话安装，执行npm I bower -g后执行bower i命令
+第六步：执行npm start命令，完成后，点击新建窗口“＋”新增窗口执行npm run protractor 命令
+
+
 执行e2e测试,这是会弹出浏览器，自动点击浏览器，录入脚本输入完成自动化e2e测试，其本质还是调用selenium测试。
 ```
 npm run protractor
 ```
 ![自动化ui测试结果](http://7xlh63.com1.z0.glb.clouddn.com/84b941fef69af1c6767156b68f069732.png)
 
+
+
+
 ## 执行构建  
 ### 构建docker镜像  
 ```
-docker build --no-cache=true --rm=true -t angular-e2etest-showcase . 
+docker build --no-cache=true --rm=true -t angular-e2etest-showcase .
 ```
 ### 运行docker镜像  
 ```
