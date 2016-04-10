@@ -13,6 +13,8 @@ module.exports = function (grunt) {
 
     //项目配置文件
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        path: path,
         //清楚文件和目录
         clean: {
             beforebuild: {
@@ -240,7 +242,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask(
-        'build', //分组名称
+        'default', //分组名称
         [        //该分组包含的任务
             'clean:beforebuild',
             'less',
